@@ -1,3 +1,5 @@
+package Driver;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,9 +31,9 @@ public class Force{
     private static void run(String program){
         //make new scanner
         System.out.println("run is running");
-//        Scanner scanner=new Scanner(program);
-//        List<Token> tokens=scanner.scanTokens();
-//        for (Token t :
+//        scanner.Scanner scanner=new scanner.Scanner(program);
+//        List<scanner.Token> tokens=scanner.scanTokens();
+//        for (scanner.Token t :
 //                tokens) {
 //            System.out.println(t.toString());
 //        }
@@ -51,7 +53,7 @@ public class Force{
         }
     }
 
-    private static void error(int line,String message){
+    public static void error(int line,String message){
         reportError(line,"[where part]",message);
         hadError=true;
     }

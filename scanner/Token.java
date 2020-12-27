@@ -1,3 +1,6 @@
+package scanner;
+import scanner.TokenType;
+
 public class Token {
     TokenType tokenType;
     int line;
@@ -13,7 +16,7 @@ public class Token {
 
     @Override
     public String toString() {
-        return "Token{" +
+        return "scanner.Token{" +
                 "tokenType=" + tokenType +
                 ", lexeme='" + lexeme + '\'' +
                 ", literal=" + literal +
