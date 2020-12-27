@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Force{
-
+    private static boolean hadError=false;
 
     public static void main(String[] args) throws IOException {
         if(args.length>1){
@@ -23,6 +23,7 @@ public class Force{
     private static void runFile(String path) throws IOException{
         byte[] bytes= Files.readAllBytes(Paths.get(path));
         run(new String(bytes, Charset.defaultCharset()));
+        if(hadError) System.exit(65);
     }
 
     private static void run(String program){
@@ -46,11 +47,13 @@ public class Force{
                 break;
             }
             run(line);
+            hadError=false;
         }
     }
 
     private static void error(int line,String message){
         reportError(line,"[where part]",message);
+        hadError=true;
     }
 
 
