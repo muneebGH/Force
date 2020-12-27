@@ -142,6 +142,7 @@ public class Scanner {
         if(isAtEnd()){
             Force.error(line,"Unterminated string");
         }
+        advance();
         //add token string by removing " and " from it.
         addToken(STRING,sourceCode.substring(start+1,current-1));
 

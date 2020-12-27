@@ -31,12 +31,12 @@ public class Force{
     private static void run(String program){
         //make new scanner
         System.out.println("run is running");
-//        scanner.Scanner scanner=new scanner.Scanner(program);
-//        List<scanner.Token> tokens=scanner.scanTokens();
-//        for (scanner.Token t :
-//                tokens) {
-//            System.out.println(t.toString());
-//        }
+        scanner.Scanner scanner=new scanner.Scanner(program);
+        List<scanner.Token> tokens=scanner.scanTokens();
+        for (scanner.Token t :
+                tokens) {
+            System.out.println(t.toString());
+        }
     }
 
     private static void runPrompt() throws IOException{
